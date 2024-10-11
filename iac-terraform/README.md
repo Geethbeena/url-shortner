@@ -15,11 +15,11 @@ This project contains the Terraform implementation of a URL shortner Application
 
 - The provider used here is the AWS provider, and the remote backend has been configured to AWS S3 bucket. AWS S3 bucket has to be created and configured prior to the terraform initiation.
 
-- Run the Terraform init command. The terraform init command initializes a working directory containing configuration files and installs plugins for required providers.
+- `terraform init` - Run the Terraform init command. The terraform init command initializes a working directory containing configuration files and installs plugins for required providers.
 
-- Terraform Plan
+- `terraform plan`
 
-- Terraform apply to deploy the application.
+- `terraform apply` - Terraform apply to deploy the application.
 
 ## Resources
 
