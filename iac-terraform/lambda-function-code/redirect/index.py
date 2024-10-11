@@ -48,10 +48,14 @@ def lambda_handler(event, context):
                 'statusCode': 404,
                 'body': json.dumps({'error': 'Url not found'})
             }
-    
+
+        logger.info('redirecting to the url')
         return {
-            'statusCode': 200,
-            'body': json.dumps({'url': response['Item']['Url']['S']})
+            'statusCode': 302,
+            'headers':{
+                'Location': response['Item']['Url']['S']
+            },
+            'body': ''
         }
     
     except Exception as error:
